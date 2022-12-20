@@ -1,6 +1,6 @@
 ﻿namespace Do_An_PhanTienHuy_NguyenHuuToan
 {
-    partial class XuatHoaDon
+    partial class fr_xuathoadon
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.bt_xuat = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txt_tenkhachhang = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -39,6 +42,9 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.guna2Panel3.Controls.Add(this.bt_xuat);
+            this.guna2Panel3.Controls.Add(this.txt_tenkhachhang);
+            this.guna2Panel3.Controls.Add(this.label7);
             this.guna2Panel3.Controls.Add(this.label10);
             this.guna2Panel3.Controls.Add(this.guna2ControlBox2);
             this.guna2Panel3.Controls.Add(this.guna2ControlBox1);
@@ -47,6 +53,60 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1124, 236);
             this.guna2Panel3.TabIndex = 9;
+            // 
+            // bt_xuat
+            // 
+            this.bt_xuat.BorderRadius = 10;
+            this.bt_xuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_xuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bt_xuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_xuat.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_xuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bt_xuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.bt_xuat.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bt_xuat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.bt_xuat.ForeColor = System.Drawing.Color.White;
+            this.bt_xuat.Location = new System.Drawing.Point(631, 140);
+            this.bt_xuat.Name = "bt_xuat";
+            this.bt_xuat.Size = new System.Drawing.Size(223, 53);
+            this.bt_xuat.TabIndex = 33;
+            this.bt_xuat.Text = "XUẤT HÓA ĐƠN";
+            this.bt_xuat.Click += new System.EventHandler(this.bt_xuat_Click);
+            // 
+            // txt_tenkhachhang
+            // 
+            this.txt_tenkhachhang.BorderRadius = 15;
+            this.txt_tenkhachhang.BorderThickness = 3;
+            this.txt_tenkhachhang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_tenkhachhang.DefaultText = "";
+            this.txt_tenkhachhang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_tenkhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_tenkhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_tenkhachhang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_tenkhachhang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.txt_tenkhachhang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_tenkhachhang.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txt_tenkhachhang.ForeColor = System.Drawing.Color.White;
+            this.txt_tenkhachhang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_tenkhachhang.Location = new System.Drawing.Point(20, 140);
+            this.txt_tenkhachhang.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txt_tenkhachhang.Name = "txt_tenkhachhang";
+            this.txt_tenkhachhang.PasswordChar = '\0';
+            this.txt_tenkhachhang.PlaceholderText = "";
+            this.txt_tenkhachhang.SelectedText = "";
+            this.txt_tenkhachhang.Size = new System.Drawing.Size(582, 53);
+            this.txt_tenkhachhang.TabIndex = 31;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(16, 102);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(162, 23);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "TÊN KHÁCH HÀNG";
             // 
             // label10
             // 
@@ -87,10 +147,10 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 236);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1124, 711);
+            this.reportViewer1.Size = new System.Drawing.Size(1124, 690);
             this.reportViewer1.TabIndex = 10;
             // 
-            // XuatHoaDon
+            // fr_xuathoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -98,9 +158,9 @@
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.guna2Panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "XuatHoaDon";
+            this.Name = "fr_xuathoadon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XuatHoaDon";
-            this.Load += new System.EventHandler(this.XuatHoaDon_Load);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -114,5 +174,8 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Guna.UI2.WinForms.Guna2TextBox txt_tenkhachhang;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2GradientButton bt_xuat;
     }
 }

@@ -114,5 +114,11 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
                 MessageBox.Show("Vui chọn id cần xóa!");
             }
         }
+
+        private void bt_xuat_Click(object sender, EventArgs e)
+        {
+            fr_xuathoadon xuathoadon = new fr_xuathoadon();
+            xuathoadon.ShowDialog();
+        }
     }
 }

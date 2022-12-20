@@ -50,29 +50,29 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.bt_xuat = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.lb_id = new System.Windows.Forms.Label();
+            this.txt_id = new Guna.UI2.WinForms.Guna2TextBox();
+            this.bt_lammoi = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.bt_xoa = new Guna.UI2.WinForms.Guna2GradientButton();
             this.bt_taohoadon = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txt_timkiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.gv_hoadon = new Guna.UI2.WinForms.Guna2DataGridView();
-            this._DoAn_NetDataSet4 = new Do_An_PhanTienHuy_NguyenHuuToan._DoAn_NetDataSet4();
-            this.hoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hoaDonTableAdapter = new Do_An_PhanTienHuy_NguyenHuuToan._DoAn_NetDataSet4TableAdapters.HoaDonTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maKhachHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenKhachHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bt_xoa = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.bt_lammoi = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.lb_id = new System.Windows.Forms.Label();
-            this.txt_id = new Guna.UI2.WinForms.Guna2TextBox();
-            this.bt_xuat = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.hoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._DoAn_NetDataSet4 = new Do_An_PhanTienHuy_NguyenHuuToan._DoAn_NetDataSet4();
+            this.hoaDonTableAdapter = new Do_An_PhanTienHuy_NguyenHuuToan._DoAn_NetDataSet4TableAdapters.HoaDonTableAdapter();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_hoadon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._DoAn_NetDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._DoAn_NetDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -346,6 +346,100 @@
             this.guna2Panel3.Size = new System.Drawing.Size(1093, 800);
             this.guna2Panel3.TabIndex = 9;
             // 
+            // bt_xuat
+            // 
+            this.bt_xuat.BorderRadius = 10;
+            this.bt_xuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_xuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bt_xuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_xuat.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_xuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bt_xuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.bt_xuat.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bt_xuat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.bt_xuat.ForeColor = System.Drawing.Color.White;
+            this.bt_xuat.Location = new System.Drawing.Point(602, 211);
+            this.bt_xuat.Name = "bt_xuat";
+            this.bt_xuat.Size = new System.Drawing.Size(168, 53);
+            this.bt_xuat.TabIndex = 37;
+            this.bt_xuat.Text = "XUẤT";
+            this.bt_xuat.Click += new System.EventHandler(this.bt_xuat_Click);
+            // 
+            // lb_id
+            // 
+            this.lb_id.AutoSize = true;
+            this.lb_id.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_id.ForeColor = System.Drawing.Color.White;
+            this.lb_id.Location = new System.Drawing.Point(29, 89);
+            this.lb_id.Name = "lb_id";
+            this.lb_id.Size = new System.Drawing.Size(38, 23);
+            this.lb_id.TabIndex = 36;
+            this.lb_id.Text = "ID :";
+            this.lb_id.Visible = false;
+            // 
+            // txt_id
+            // 
+            this.txt_id.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.txt_id.BorderRadius = 15;
+            this.txt_id.BorderThickness = 3;
+            this.txt_id.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_id.DefaultText = "";
+            this.txt_id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_id.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_id.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.txt_id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_id.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txt_id.ForeColor = System.Drawing.Color.White;
+            this.txt_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_id.Location = new System.Drawing.Point(63, 79);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.PasswordChar = '\0';
+            this.txt_id.PlaceholderText = "";
+            this.txt_id.SelectedText = "";
+            this.txt_id.Size = new System.Drawing.Size(82, 43);
+            this.txt_id.TabIndex = 35;
+            // 
+            // bt_lammoi
+            // 
+            this.bt_lammoi.BorderRadius = 10;
+            this.bt_lammoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_lammoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bt_lammoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_lammoi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_lammoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bt_lammoi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.bt_lammoi.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bt_lammoi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.bt_lammoi.ForeColor = System.Drawing.Color.White;
+            this.bt_lammoi.Location = new System.Drawing.Point(413, 211);
+            this.bt_lammoi.Name = "bt_lammoi";
+            this.bt_lammoi.Size = new System.Drawing.Size(168, 53);
+            this.bt_lammoi.TabIndex = 29;
+            this.bt_lammoi.Text = "LÀM MỚI";
+            this.bt_lammoi.Click += new System.EventHandler(this.bt_lammoi_Click);
+            // 
+            // bt_xoa
+            // 
+            this.bt_xoa.BorderRadius = 10;
+            this.bt_xoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt_xoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bt_xoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_xoa.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt_xoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bt_xoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.bt_xoa.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bt_xoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.bt_xoa.ForeColor = System.Drawing.Color.White;
+            this.bt_xoa.Location = new System.Drawing.Point(219, 211);
+            this.bt_xoa.Name = "bt_xoa";
+            this.bt_xoa.Size = new System.Drawing.Size(168, 53);
+            this.bt_xoa.TabIndex = 28;
+            this.bt_xoa.Text = "XÓA";
+            this.bt_xoa.Click += new System.EventHandler(this.bt_xoa_Click);
+            // 
             // bt_taohoadon
             // 
             this.bt_taohoadon.BorderRadius = 10;
@@ -464,20 +558,6 @@
             this.gv_hoadon.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gv_hoadon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_hoadon_CellContentClick);
             // 
-            // _DoAn_NetDataSet4
-            // 
-            this._DoAn_NetDataSet4.DataSetName = "_DoAn_NetDataSet4";
-            this._DoAn_NetDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // hoaDonBindingSource
-            // 
-            this.hoaDonBindingSource.DataMember = "HoaDon";
-            this.hoaDonBindingSource.DataSource = this._DoAn_NetDataSet4;
-            // 
-            // hoaDonTableAdapter
-            // 
-            this.hoaDonTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -514,98 +594,19 @@
             this.ngayLapDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ngayLapDataGridViewTextBoxColumn.Name = "ngayLapDataGridViewTextBoxColumn";
             // 
-            // bt_xoa
+            // hoaDonBindingSource
             // 
-            this.bt_xoa.BorderRadius = 10;
-            this.bt_xoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt_xoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt_xoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt_xoa.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt_xoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt_xoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bt_xoa.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bt_xoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.bt_xoa.ForeColor = System.Drawing.Color.White;
-            this.bt_xoa.Location = new System.Drawing.Point(219, 211);
-            this.bt_xoa.Name = "bt_xoa";
-            this.bt_xoa.Size = new System.Drawing.Size(168, 53);
-            this.bt_xoa.TabIndex = 28;
-            this.bt_xoa.Text = "XÓA";
-            this.bt_xoa.Click += new System.EventHandler(this.bt_xoa_Click);
+            this.hoaDonBindingSource.DataMember = "HoaDon";
+            this.hoaDonBindingSource.DataSource = this._DoAn_NetDataSet4;
             // 
-            // bt_lammoi
+            // _DoAn_NetDataSet4
             // 
-            this.bt_lammoi.BorderRadius = 10;
-            this.bt_lammoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt_lammoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt_lammoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt_lammoi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt_lammoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt_lammoi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bt_lammoi.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bt_lammoi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.bt_lammoi.ForeColor = System.Drawing.Color.White;
-            this.bt_lammoi.Location = new System.Drawing.Point(413, 211);
-            this.bt_lammoi.Name = "bt_lammoi";
-            this.bt_lammoi.Size = new System.Drawing.Size(168, 53);
-            this.bt_lammoi.TabIndex = 29;
-            this.bt_lammoi.Text = "LÀM MỚI";
-            this.bt_lammoi.Click += new System.EventHandler(this.bt_lammoi_Click);
+            this._DoAn_NetDataSet4.DataSetName = "_DoAn_NetDataSet4";
+            this._DoAn_NetDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // lb_id
+            // hoaDonTableAdapter
             // 
-            this.lb_id.AutoSize = true;
-            this.lb_id.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_id.ForeColor = System.Drawing.Color.White;
-            this.lb_id.Location = new System.Drawing.Point(29, 89);
-            this.lb_id.Name = "lb_id";
-            this.lb_id.Size = new System.Drawing.Size(38, 23);
-            this.lb_id.TabIndex = 36;
-            this.lb_id.Text = "ID :";
-            this.lb_id.Visible = false;
-            // 
-            // txt_id
-            // 
-            this.txt_id.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.txt_id.BorderRadius = 15;
-            this.txt_id.BorderThickness = 3;
-            this.txt_id.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_id.DefaultText = "";
-            this.txt_id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_id.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_id.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.txt_id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_id.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txt_id.ForeColor = System.Drawing.Color.White;
-            this.txt_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_id.Location = new System.Drawing.Point(63, 79);
-            this.txt_id.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txt_id.Name = "txt_id";
-            this.txt_id.PasswordChar = '\0';
-            this.txt_id.PlaceholderText = "";
-            this.txt_id.SelectedText = "";
-            this.txt_id.Size = new System.Drawing.Size(82, 43);
-            this.txt_id.TabIndex = 35;
-            // 
-            // bt_xuat
-            // 
-            this.bt_xuat.BorderRadius = 10;
-            this.bt_xuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt_xuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt_xuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt_xuat.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt_xuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt_xuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bt_xuat.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bt_xuat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.bt_xuat.ForeColor = System.Drawing.Color.White;
-            this.bt_xuat.Location = new System.Drawing.Point(602, 211);
-            this.bt_xuat.Name = "bt_xuat";
-            this.bt_xuat.Size = new System.Drawing.Size(168, 53);
-            this.bt_xuat.TabIndex = 37;
-            this.bt_xuat.Text = "XUẤT";
+            this.hoaDonTableAdapter.ClearBeforeFill = true;
             // 
             // fr_hoadon
             // 
@@ -626,8 +627,8 @@
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_hoadon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._DoAn_NetDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._DoAn_NetDataSet4)).EndInit();
             this.ResumeLayout(false);
 
         }
