@@ -22,9 +22,14 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
 
         private void fr_taohoadon_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_DoAn_NetDataSet5.CTHoaDon' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the '_DoAn_NetDataSet5.SanPhamDat' table. You can move, or remove it, as needed.
+            this.sanPhamDatTableAdapter.Fill(this._DoAn_NetDataSet5.SanPhamDat);
+            lb_id.Visible = false;
+            dis_cthoadon();
             get_tensp();
             get_tenkhachhang();
+            txt_makhachhang.Enabled = false;
+            txt_masanpham.Enabled = false;
         }
         public void get_tensp()
         {
@@ -60,7 +65,7 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
                 da.Fill(dt);
                 DataRow row = dt.NewRow();
                 row[0] = 0;
-                row[1] = "Chọn tên KH";
+                row[1] = "Chọn tên khách hàng";
                 dt.Rows.InsertAt(row, 0);
                 cb_tenkhachhang.DataSource = dt;
                 cb_tenkhachhang.DisplayMember = "TenKhachHang";
@@ -78,7 +83,7 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
             {
                 con = new SqlConnection(connect);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM CTHoaDon", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM SanPhamDat", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -92,14 +97,16 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
         }
         public void cl_cthoadon()
         {
-            txt_mahoadon.Text = "";
+            txt_id.Text = "";
             txt_masanpham.Text = "";
             cb_tensanpham.SelectedIndex = -1;
-            cb_tenkhachhang.SelectedIndex = -1;
+            cb_tenkhachhang.SelectedIndex = 0;
             txt_makhachhang.Text = "";
+            txt_gia.Text = "";
             txt_soluong.Text = "";
-            txt_ngaylap.Text = "";
             txt_tongtien.Text = "";
+            lb_id.Visible = false;
+            cb_tenkhachhang.Enabled = true;
         }
         private void bt_lammoi_Click(object sender, EventArgs e)
         {
@@ -109,36 +116,41 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
         private void gv_cthoadon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int rows_id = e.RowIndex;
-            txt_mahoadon.Text = gv_cthoadon.Rows[rows_id].Cells[0].Value.ToString().Trim();
+            txt_id.Text = gv_cthoadon.Rows[rows_id].Cells[0].Value.ToString().Trim();
             txt_masanpham.Text = gv_cthoadon.Rows[rows_id].Cells[1].Value.ToString().Trim();
-            cb_tensanpham.Text = gv_cthoadon.Rows[rows_id].Cells[2].Value.ToString().Trim();
-            txt_soluong.Text = gv_cthoadon.Rows[rows_id].Cells[3].Value.ToString().Trim();
-            txt_tongtien.Text = gv_cthoadon.Rows[rows_id].Cells[4].Value.ToString().Trim();
+            txt_makhachhang.Text = gv_cthoadon.Rows[rows_id].Cells[2].Value.ToString().Trim();
+            cb_tensanpham.Text = gv_cthoadon.Rows[rows_id].Cells[4].Value.ToString().Trim();
+            cb_tenkhachhang.Text = gv_cthoadon.Rows[rows_id].Cells[3].Value.ToString().Trim();
+            txt_soluong.Text = gv_cthoadon.Rows[rows_id].Cells[5].Value.ToString().Trim();
+            txt_tongtien.Text = gv_cthoadon.Rows[rows_id].Cells[6].Value.ToString().Trim();
+            cb_tenkhachhang.Enabled = false;
+            lb_id.Visible = true;
         }
 
         private void bt_them_Click(object sender, EventArgs e)
         {
-            if (txt_mahoadon.Text != "" && txt_masanpham.Text != "" && cb_tensanpham.Text != "" && txt_soluong.Text !="" && txt_tongtien.Text!="")
+            if (txt_masanpham.Text != "" && cb_tensanpham.Text != "" && txt_gia.Text !="" && txt_tongtien.Text!=""&&cb_tenkhachhang.Text!="")
             {
                 try
                 {
                     con = new SqlConnection(connect);
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("INSERT INTO CTHoaDon(MaHoaDon,Id_SanPham,TenSanPham,SoLuong,TongTien) VALUES(@mahoadon,@masanpham,@tensanpham,@soluong,@tongtien)", con);
-                    cmd.Parameters.AddWithValue("@mahoadon", txt_mahoadon.Text);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO SanPhamDat(Id_SanPham,TenSanPham,SoLuong,TongTien,MaKhachHang,TenKhachHang) VALUES(@masanpham,@tensanpham,@soluong,@tongtien,@makhachhang,@tenkhachhang)", con);                   
                     cmd.Parameters.AddWithValue("@masanpham", txt_masanpham.Text);
                     cmd.Parameters.AddWithValue("@tensanpham", cb_tensanpham.Text);
                     cmd.Parameters.AddWithValue("@soluong", txt_soluong.Text);
                     cmd.Parameters.AddWithValue("@tongtien", txt_tongtien.Text);
+                    cmd.Parameters.AddWithValue("@makhachhang", txt_makhachhang.Text);
+                    cmd.Parameters.AddWithValue("@tenkhachhang", cb_tenkhachhang.Text);
                     int row = cmd.ExecuteNonQuery();
                     {
-                        if (row == 1)
+                        if (row >0)
                         {
-                            MessageBox.Show("Thêm chi tiết hóa đơn thành công");
+                            MessageBox.Show("Thêm sản phẩm đặt thành công");
                         }
                         else
                         {
-                            MessageBox.Show("Thêm chi tiết hóa đơn thất bại");
+                            MessageBox.Show("Thêm sản phẩm đặt thất bại");
                         }
                     }
                     dis_cthoadon();
@@ -152,7 +164,7 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
             }
             else
             {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin nhân viên!");
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
             }
         }
 
@@ -169,7 +181,7 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
                 {
                     txt_makhachhang.Text = dt.Rows[0]["MaKhachHang"].ToString();
                 }
-                if (cb_tenkhachhang.Text == "Chọn nhân viên")
+                if (cb_tenkhachhang.Text == "Chọn tên khách hàng")
                 {
                     txt_makhachhang.Text = "";
                 }
@@ -193,6 +205,8 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
                 if (dt.Rows.Count > 0)
                 {
                     txt_masanpham.Text = dt.Rows[0]["id"].ToString();
+                    txt_gia.Text= dt.Rows[0]["Gia"].ToString();
+                    NguoiDung.gia=float.Parse(dt.Rows[0]["Gia"].ToString());
                 }
                 if (cb_tenkhachhang.Text == "Chọn tên sản phẩm")
                 {
@@ -205,5 +219,122 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void txt_soluong_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_soluong.Text!="")
+            {
+                txt_tongtien.Text = (Int32.Parse(txt_soluong.Text) * NguoiDung.gia).ToString();
+            }
+            else
+            {
+                txt_tongtien.Text = "";
+            }
+        }
+
+        private void bt_sua_Click(object sender, EventArgs e)
+        {
+            if (txt_masanpham.Text != "" && cb_tensanpham.Text != "" && txt_gia.Text != "" && txt_tongtien.Text != "" && cb_tenkhachhang.Text != "")
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("UPDATE SanPhamDat SET TenSanPham=@tensanpham,SoLuong=@soluong,TongTien=@tongtien, MaKhachHang=@makhachhang,TenKhachHang=@tenkhachhang,Id_SanPham=@masanpham WHERE id=@id", con);
+                    cmd.Parameters.AddWithValue("@tensanpham", cb_tensanpham.Text);
+                    cmd.Parameters.AddWithValue("@soluong", txt_soluong.Text);
+                    cmd.Parameters.AddWithValue("@tongtien", txt_tongtien.Text);
+                    cmd.Parameters.AddWithValue("@makhachhang", txt_makhachhang.Text);
+                    cmd.Parameters.AddWithValue("@tenkhachhang", cb_tenkhachhang.Text);
+                    cmd.Parameters.AddWithValue("@masanpham", txt_masanpham.Text);
+                    cmd.Parameters.AddWithValue("@id", txt_id.Text);
+                    int rowsaffected = cmd.ExecuteNonQuery();
+                    if (rowsaffected == 1)
+                    {
+                        MessageBox.Show("Sửa thành công");
+                    }
+                    dis_cthoadon();
+                    cl_cthoadon();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+            }
+        }
+
+        private void bt_xoa_Click(object sender, EventArgs e)
+        {
+            if (txt_id.Text != "")
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("DELETE SanPhamDat WHERE id=@id", con);
+                    cmd.Parameters.AddWithValue("@id", txt_id.Text);
+                    int rowsaffected = cmd.ExecuteNonQuery();
+                    if (rowsaffected == 1)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                    }
+                    dis_cthoadon();
+                    cl_cthoadon();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui chọn id cần xóa!");
+            }
+        }
+
+        private void bt_toahoadon_Click(object sender, EventArgs e)
+        {
+            if (txt_makhachhang.Text != "" && cb_tenkhachhang.Text != "" &&txt_tongtien.Text != "")
+            {
+                try
+                {
+                    con = new SqlConnection(connect);
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("INSERT INTO HoaDon(MaKhachHang,TenKhachHang,TongTien,NgayLap) VALUES(@makhachhang,@tenkhachhang,@tongtien,@ngaylap)", con);
+                    cmd.Parameters.AddWithValue("@makhachhang", txt_makhachhang.Text);                   
+                    cmd.Parameters.AddWithValue("@tenkhachhang", cb_tenkhachhang.Text);
+                    cmd.Parameters.AddWithValue("@tongtien", txt_tongtien.Text);
+                    cmd.Parameters.AddWithValue("@ngaylap", txt_ngaylap.Text);
+                    int row = cmd.ExecuteNonQuery();
+                    {
+                        if (row >0)
+                        {
+                            MessageBox.Show("Tạo thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tạo lỗi!");
+                        }
+                    }
+                    dis_cthoadon();
+                    cl_cthoadon();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+            }
+        }
+
+        
     }
 }

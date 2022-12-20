@@ -12,5 +12,7 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
         public static string HoVaTen;
         public static string Email;
         public static string Avatar;
+        public static float gia;
+        public static int soluong;
     }
 }

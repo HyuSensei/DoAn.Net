@@ -16,7 +16,7 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fr_taohoadon());
+            Application.Run(new fr_nhanvien());
         }
     }
 }
