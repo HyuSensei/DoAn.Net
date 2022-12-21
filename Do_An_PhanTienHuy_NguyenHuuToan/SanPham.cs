@@ -270,6 +270,56 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
             trangchu.ShowDialog();
         }
 
-       
+        private void btn_trangchu_Click_1(object sender, EventArgs e)
+        {
+            fr_trangchu trangchu = new fr_trangchu();
+            this.Hide();
+            trangchu.ShowDialog();
+        }
+
+        private void btn_nhaphang_Click(object sender, EventArgs e)
+        {
+            fr_nhaphang nhanhang = new fr_nhaphang();
+            this.Hide();
+            nhanhang.ShowDialog();
+        }
+
+        private void btn_khachhang_Click(object sender, EventArgs e)
+        {
+            fr_khachhang khachhang = new fr_khachhang();
+            this.Hide();
+            khachhang.ShowDialog();
+        }
+
+        private void bnt_taikhoan_Click(object sender, EventArgs e)
+        {
+            fr_taikhoan taikhoan = new fr_taikhoan();
+            taikhoan.ShowDialog();
+        }
+
+        private void btn_hoadon_Click(object sender, EventArgs e)
+        {
+            fr_hoadon hoadon = new fr_hoadon();
+            this.Hide();
+            hoadon.ShowDialog();
+        }
+
+        private void btn_nhanvien_Click(object sender, EventArgs e)
+        {
+            fr_nhanvien nhanvien = new fr_nhanvien();
+            this.Hide();
+            nhanvien.ShowDialog();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Đăng xuất ngay!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                fr_dangnhap dangnhap = new fr_dangnhap();
+                this.Hide();
+                dangnhap.ShowDialog();
+            }
+        }
     }
 }

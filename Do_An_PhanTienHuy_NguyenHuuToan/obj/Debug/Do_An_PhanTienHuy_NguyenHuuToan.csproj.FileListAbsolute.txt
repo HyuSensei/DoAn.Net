@@ -72,3 +72,4 @@ D:\VStudio\Do_An_PhanTienHuy_NguyenHuuToan\Do_An_PhanTienHuy_NguyenHuuToan\bin\D
 D:\VStudio\Do_An_PhanTienHuy_NguyenHuuToan\Do_An_PhanTienHuy_NguyenHuuToan\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\VStudio\Do_An_PhanTienHuy_NguyenHuuToan\Do_An_PhanTienHuy_NguyenHuuToan\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\VStudio\Do_An_PhanTienHuy_NguyenHuuToan\Do_An_PhanTienHuy_NguyenHuuToan\obj\Debug\Do_An_PhanTienHuy_NguyenHuuToan.fr_xuathoadon.resources
+D:\VStudio\Do_An_PhanTienHuy_NguyenHuuToan\Do_An_PhanTienHuy_NguyenHuuToan\obj\Debug\Do_An_PhanTienHuy_NguyenHuuToan.fr_taikhoan.resources
