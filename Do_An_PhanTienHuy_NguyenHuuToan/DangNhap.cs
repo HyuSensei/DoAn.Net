@@ -55,14 +55,11 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
                         NguoiDung.HoVaTen = dt.Rows[0]["HoVaTen"].ToString();
                         NguoiDung.id = Convert.ToInt32(dt.Rows[0]["id"].ToString());
                         NguoiDung.Email = dt.Rows[0]["Email"].ToString();
+                        NguoiDung.Role= dt.Rows[0]["Role"].ToString();
                         MessageBox.Show("Đăng nhập thành công");
-                        var Role = dt.Rows[0].Field<string>("Role");
-                        if (Role == "NhanVien")
-                        {
-                            fr_trangchu trangchu = new fr_trangchu();
-                            this.Hide();
-                            trangchu.ShowDialog();
-                        }
+                        fr_trangchu trangchu = new fr_trangchu();
+                        this.Hide();
+                        trangchu.ShowDialog();
                     }
                     else
                     {

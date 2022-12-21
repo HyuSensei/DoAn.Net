@@ -146,7 +146,7 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
                     {
                         if (row >0)
                         {
-                            MessageBox.Show("Thêm sản phẩm đặt thành công");
+                            MessageBox.Show("Thêm thành công");
                         }
                         else
                         {
@@ -298,7 +298,7 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
 
         private void bt_toahoadon_Click(object sender, EventArgs e)
         {
-            if (txt_makhachhang.Text != "" && cb_tenkhachhang.Text != "" &&txt_tongtien.Text != "")
+            if (txt_makhachhang.Text != "" && cb_tenkhachhang.Text != "" &&txt_tongtien.Text != ""&&txt_ngaylap.Text!="")
             {
                 try
                 {
@@ -312,14 +312,21 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
                     int row = cmd.ExecuteNonQuery();
                     {
                         if (row >0)
-                        {
-                            MessageBox.Show("Tạo thành công");
+                        {                         
+                                cmd = new SqlCommand("DELETE SanPhamDat WHERE id=@id", con);
+                                cmd.Parameters.AddWithValue("@id", txt_id.Text);
+                                int rowsaffected = cmd.ExecuteNonQuery();
+                                if (rowsaffected == 1)
+                                {
+                                    MessageBox.Show("Tạo thành công");
+                                }                                                   
                         }
                         else
                         {
                             MessageBox.Show("Tạo lỗi!");
                         }
                     }
+                    txt_ngaylap.Text = "";
                     dis_cthoadon();
                     cl_cthoadon();
                     con.Close();

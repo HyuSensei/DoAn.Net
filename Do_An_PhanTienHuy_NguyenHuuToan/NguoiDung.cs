@@ -14,5 +14,6 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
         public static string Avatar;
         public static float gia;
         public static int soluong;
+        public static string Role;
     }
 }

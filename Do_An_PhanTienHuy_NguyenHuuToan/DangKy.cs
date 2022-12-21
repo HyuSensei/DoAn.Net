@@ -37,6 +37,7 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
 
         private void btn_them_anh_Click(object sender, EventArgs e)
         {
+            pic_avatar_con.Visible = false;
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "jpeg|*.jpg|bmp|*.bmp|all files|*.*" })
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
@@ -48,7 +49,6 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
         }
         public void clear_dangky()
         {
-            pic_avatar_con.Visible = true;
             pic_avatar.Image = null;
             pic_avatar.Invalidate();
             txt_tendangnhap.Text = "";
@@ -73,6 +73,7 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
 
         private void btn_dangky_Click(object sender, EventArgs e)
         {
+            pic_avatar_con.Visible = true;
             if (txt_diachi.Text != "" && txt_tendangnhap.Text != "" && txt_matkhau.Text != "" && txt_sodienthoai.Text != "" && txt_email.Text != "" && txt_hovaten.Text != "")
             {
                 string connect = "server=" + @"DESKTOP-1VK71I1\SQLEXPRESS" + ";database=" + "DoAn.Net" + ";integrated security=true";

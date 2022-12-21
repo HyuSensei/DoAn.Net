@@ -137,7 +137,7 @@
             this.pic_avatar_con.Name = "pic_avatar_con";
             this.pic_avatar_con.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pic_avatar_con.Size = new System.Drawing.Size(176, 163);
-            this.pic_avatar_con.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_avatar_con.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_avatar_con.TabIndex = 1;
             this.pic_avatar_con.TabStop = false;
             this.pic_avatar_con.Visible = false;

@@ -190,7 +190,7 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
                     int rowsaffected = cmd.ExecuteNonQuery();
                     if (rowsaffected == 1)
                     {
-                        MessageBox.Show("Xóa sản phẩm thành công");
+                        MessageBox.Show("Xóa nhân viên công");
                     }
                     dis_nhanvien();
                     cl_nhanvien();

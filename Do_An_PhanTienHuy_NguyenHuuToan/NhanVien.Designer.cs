@@ -44,8 +44,6 @@
             this.btn_trangchu = new Guna.UI2.WinForms.Guna2Button();
             this.btn_dangxuat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pic_logo = new System.Windows.Forms.PictureBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.pic_nhanvien_con = new System.Windows.Forms.PictureBox();
             this.pic_nhanvien = new System.Windows.Forms.PictureBox();
@@ -75,15 +73,17 @@
             this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._DoAn_NetDataSet3 = new Do_An_PhanTienHuy_NguyenHuuToan._DoAn_NetDataSet3();
             this.nhanVienTableAdapter = new Do_An_PhanTienHuy_NguyenHuuToan._DoAn_NetDataSet3TableAdapters.NhanVienTableAdapter();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_nhanvien_con)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_nhanvien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_nhanvien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._DoAn_NetDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -319,27 +319,6 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(289, 166);
             this.guna2Panel2.TabIndex = 0;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Snap ITC", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label12.Location = new System.Drawing.Point(79, 125);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(143, 30);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "SkinLeLe";
-            // 
-            // pic_logo
-            // 
-            this.pic_logo.Image = ((System.Drawing.Image)(resources.GetObject("pic_logo.Image")));
-            this.pic_logo.Location = new System.Drawing.Point(84, 3);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(113, 119);
-            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_logo.TabIndex = 0;
-            this.pic_logo.TabStop = false;
             // 
             // guna2Panel3
             // 
@@ -805,6 +784,27 @@
             // 
             this.nhanVienTableAdapter.ClearBeforeFill = true;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Snap ITC", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label12.Location = new System.Drawing.Point(73, 129);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(143, 30);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "SkinLeLe";
+            // 
+            // pic_logo
+            // 
+            this.pic_logo.Image = ((System.Drawing.Image)(resources.GetObject("pic_logo.Image")));
+            this.pic_logo.Location = new System.Drawing.Point(88, 7);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(113, 119);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_logo.TabIndex = 2;
+            this.pic_logo.TabStop = false;
+            // 
             // fr_nhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -821,7 +821,6 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_nhanvien_con)).EndInit();
@@ -829,6 +828,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gv_nhanvien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._DoAn_NetDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -838,8 +838,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btn_dangxuat;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pic_logo;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2GradientButton bt_chonanh;
@@ -877,5 +875,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_nhaphang;
         private Guna.UI2.WinForms.Guna2Button btn_sanpham;
         private Guna.UI2.WinForms.Guna2Button btn_trangchu;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pic_logo;
     }
 }

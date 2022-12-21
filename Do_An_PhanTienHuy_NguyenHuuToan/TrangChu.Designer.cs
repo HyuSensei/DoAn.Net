@@ -38,7 +38,6 @@
             this.btn_dangxuat = new Guna.UI2.WinForms.Guna2Button();
             this.lb_email = new System.Windows.Forms.Label();
             this.lb_hovaten = new System.Windows.Forms.Label();
-            this.el_trangchu = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,6 +76,7 @@
             this.btn_hoadon = new Guna.UI2.WinForms.Guna2Button();
             this.btn_nhanvien = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lb_role = new System.Windows.Forms.Label();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2Panel4.SuspendLayout();
@@ -140,7 +140,7 @@
             // 
             this.lb_email.AutoSize = true;
             this.lb_email.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_email.Location = new System.Drawing.Point(26, 244);
+            this.lb_email.Location = new System.Drawing.Point(15, 294);
             this.lb_email.Name = "lb_email";
             this.lb_email.Size = new System.Drawing.Size(47, 20);
             this.lb_email.TabIndex = 2;
@@ -150,16 +150,11 @@
             // 
             this.lb_hovaten.AutoSize = true;
             this.lb_hovaten.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hovaten.Location = new System.Drawing.Point(26, 204);
+            this.lb_hovaten.Location = new System.Drawing.Point(15, 250);
             this.lb_hovaten.Name = "lb_hovaten";
             this.lb_hovaten.Size = new System.Drawing.Size(57, 23);
             this.lb_hovaten.TabIndex = 1;
             this.lb_hovaten.Text = "Name";
-            // 
-            // el_trangchu
-            // 
-            this.el_trangchu.BorderRadius = 15;
-            this.el_trangchu.TargetControl = this;
             // 
             // guna2Panel3
             // 
@@ -404,6 +399,7 @@
             // guna2Panel7
             // 
             this.guna2Panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.guna2Panel7.Controls.Add(this.lb_role);
             this.guna2Panel7.Controls.Add(this.pic_avatar);
             this.guna2Panel7.Controls.Add(this.guna2DateTimePicker1);
             this.guna2Panel7.Controls.Add(this.lb_email);
@@ -653,6 +649,16 @@
             this.guna2Panel1.Size = new System.Drawing.Size(289, 800);
             this.guna2Panel1.TabIndex = 2;
             // 
+            // lb_role
+            // 
+            this.lb_role.AutoSize = true;
+            this.lb_role.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_role.Location = new System.Drawing.Point(15, 212);
+            this.lb_role.Name = "lb_role";
+            this.lb_role.Size = new System.Drawing.Size(45, 23);
+            this.lb_role.TabIndex = 11;
+            this.lb_role.Text = "Role";
+            // 
             // fr_trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -703,7 +709,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2Button btn_dangxuat;
-        private Guna.UI2.WinForms.Guna2Elipse el_trangchu;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
@@ -744,5 +749,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pic_logo;
+        private System.Windows.Forms.Label lb_role;
     }
 }

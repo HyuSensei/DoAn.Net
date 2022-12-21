@@ -62,6 +62,15 @@ namespace Do_An_PhanTienHuy_NguyenHuuToan
             fill_thongke();
             lb_hovaten.Text = NguoiDung.HoVaTen;
             lb_email.Text = NguoiDung.Email;
+            if (NguoiDung.Role == "Admin")
+            {
+                lb_role.Text = "Admin";
+            }
+            else
+            {
+                lb_role.Text = "Nhân viên";
+                btn_nhanvien.Visible = false;
+            }
             try
             {
 
